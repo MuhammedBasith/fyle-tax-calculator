@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="tax-form">
+        <h1 class="mb-4 text-center">Tax Calculator</h1>
+        
+        <form id="taxCalculatorForm">
+            <div class="form-group">
+                <label for="grossIncome">Gross Annual Income (in Lakhs)</label>
+                <img src="images/question.png" alt="" class="question" data-toggle="tooltip" data-placement="right" title="Gross annual income is your total salary in a year before any deductions.">
+                <input type="" class="form-control" id="grossIncome" min="0" onchange="checkForTextOne()" required>
+                <div class="error-icon">
+                    <img src="images/error_icon.png" alt="Error Icon" id="error-icon-one" data-toggle="tooltip" data-placement="right" title="Only Enter Numbers." />
+                    <div class="error-tooltip"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="extraIncome">Extra Income (in Lakhs)</label>
+                <img src="images/question.png" alt="" class="question" data-toggle="tooltip" data-placement="right" title="Extra Income.">
+                <input type="" class="form-control" id="extraIncome" min="0" onchange="checkForTextTwo()" required>
+                <div class="error-icon">
+                    <img src="images/error_icon.png" alt="Error Icon" id="error-icon-two" data-toggle="tooltip" data-placement="right" title="Only Enter Numbers." />
+                    <div class="error-tooltip"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="deductions">Deductions (in Lakhs)</label>
+                <img src="images/question.png" alt="" class="question" data-toggle="tooltip" data-placement="right" title="Your Deductions.">
+                <input type="" class="form-control" id="deductions" min="0" onchange="checkForTextThree()" required>
+                <div class="error-icon">
+                    <img src="images/error_icon.png" alt="Error Icon" id="error-icon-three" data-toggle="tooltip" data-placement="right" title="Only Enter Numbers." />
+                    <div class="error-tooltip"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age</label>
+                <img src="images/question.png" alt="" class="question" data-toggle="tooltip" data-placement="right" title="Your Age Category.">
+                <select class="form-control" id="age" required>
+                    <option value=""><-- Select Age --></option>
+                    <option value="<40">&lt;40</option>
+                    <option value=">=40&<60">&ge;40 &lt;60</option>
+                    <option value=">=60">&ge;60</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Calculate Tax</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="resultsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resultsModalLabel">Tax Calculation Results</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Tax Amount: <span id="taxAmount"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
