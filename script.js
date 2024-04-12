@@ -36,6 +36,7 @@ $(document).ready(function() {
         }
     });
 
+
     // Handle form submission
     $('#taxCalculatorForm').submit(function(e) {
         e.preventDefault();
@@ -53,6 +54,7 @@ $(document).ready(function() {
 
         let ageValue = $('#age').val();
         if (!ageValue) {
+
             showErrorIcon($('#age'), 'Age is required');
             isValid = false;
         }

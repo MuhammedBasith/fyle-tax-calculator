@@ -48,7 +48,7 @@
             <div class="form-group">
                 <label for="age">Age</label>
                 <img src="images/question.png" alt="" class="question" data-toggle="tooltip" data-placement="right" title="Your Age Category.">
-                <select class="form-control" id="age" required>
+                <select class="form-control" id="age">
                     <option value=""><-- Select Age --></option>
                     <option value="<40">&lt;40</option>
                     <option value=">=40&<60">&ge;40 &lt;60</option>
@@ -81,6 +81,63 @@
 </div>
 
 
+
+<script>
+    function checkForTextOne(){
+        function enableErrorIcon() {
+            let errorIcon = document.querySelector('#error-icon-one');
+            errorIcon.style.display = 'inline';
+        }
+        function disableErrorIcon() {
+            let errorIcon = document.querySelector('#error-icon-one');
+            errorIcon.style.display = 'none';
+        }
+
+        const annualIncome = document.getElementById('grossIncome').value
+        if (isNaN(annualIncome)){
+            enableErrorIcon()
+        }else{
+            disableErrorIcon()
+            }
+        }
+
+    
+    function checkForTextTwo(){
+        function enableErrorIcon() {
+            let errorIcon = document.querySelector('#error-icon-two');
+            errorIcon.style.display = 'inline';
+        }
+        function disableErrorIcon() {
+            let errorIcon = document.querySelector('#error-icon-two');
+            errorIcon.style.display = 'none';
+        }
+
+        const extraIncome = document.getElementById('extraIncome').value
+        if (isNaN(extraIncome)){
+            enableErrorIcon()
+        }else{
+            disableErrorIcon()
+            }
+        }
+
+    function checkForTextThree(){
+        function enableErrorIcon() {
+            let errorIcon = document.querySelector('#error-icon-three');
+            errorIcon.style.display = 'inline';
+        }
+        function disableErrorIcon() {
+            let errorIcon = document.querySelector('#error-icon-three');
+            errorIcon.style.display = 'none';
+        }
+
+        const deductions = document.getElementById('deductions').value
+        if (isNaN(deductions)){
+            enableErrorIcon()
+        }else{
+            disableErrorIcon()
+            }
+        }
+</script>
 
 <!-- Bootstrap JS and jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
