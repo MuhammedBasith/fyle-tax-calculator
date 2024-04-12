@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Function to display error icon and tooltip
     function showErrorIcon(inputElement, message) {
         let errorIcon = inputElement.next('.error-icon');
-        errorIcon.find('img').attr('src', 'error_icon.png');
+        errorIcon.find('img').attr('src', 'images/error_icon.png');
         errorIcon.find('.error-tooltip').text(message);
         errorIcon.show();
     }

@@ -55,7 +55,6 @@
                     <option value=">=60">&ge;60</option>
                 </select>
             </div>
-            
             <button type="submit" class="btn btn-primary btn-block">Calculate Tax</button>
         </form>
     </div>
@@ -85,12 +84,16 @@
 <script>
     function checkForTextOne(){
         function enableErrorIcon() {
+            let whole = document.querySelector('.error-icon')
             let errorIcon = document.querySelector('#error-icon-one');
+            whole.style.display = 'inline';
             errorIcon.style.display = 'inline';
         }
         function disableErrorIcon() {
             let errorIcon = document.querySelector('#error-icon-one');
+            let whole = document.querySelector('.error-icon')
             errorIcon.style.display = 'none';
+            whole.style.display = 'none';
         }
 
         const annualIncome = document.getElementById('grossIncome').value
@@ -104,12 +107,15 @@
     
     function checkForTextTwo(){
         function enableErrorIcon() {
+            let whole = document.querySelector('.error-icon')
             let errorIcon = document.querySelector('#error-icon-two');
+            whole.style.display = 'inline';
             errorIcon.style.display = 'inline';
         }
         function disableErrorIcon() {
             let errorIcon = document.querySelector('#error-icon-two');
             errorIcon.style.display = 'none';
+            whole.style.display = 'none';
         }
 
         const extraIncome = document.getElementById('extraIncome').value
@@ -122,12 +128,15 @@
 
     function checkForTextThree(){
         function enableErrorIcon() {
+            let whole = document.querySelector('.error-icon')
             let errorIcon = document.querySelector('#error-icon-three');
+            whole.style.display = 'inline';
             errorIcon.style.display = 'inline';
         }
         function disableErrorIcon() {
             let errorIcon = document.querySelector('#error-icon-three');
             errorIcon.style.display = 'none';
+            whole.style.display = 'none';
         }
 
         const deductions = document.getElementById('deductions').value
